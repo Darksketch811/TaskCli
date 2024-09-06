@@ -15,7 +15,10 @@ TaskCli mark-done 1
 Listing all tasks
 TaskCli list
 
-# Listing tasks by status
+Listing tasks by status
 TaskCli list done
 TaskCli list todo
 TaskCli list in-progress
+
+
+Check the below link for further details: https://roadmap.sh/projects/task-tracker
