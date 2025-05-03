@@ -6,14 +6,15 @@ pipeline {
                 echo 'Building...'
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Testing...'
+                sh 'mvn clean package'
             }
         }
-        stage('Deploy') {
+
+        stage('Archive JAR') {
             steps {
-                echo 'Deploying...'
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
     }
